@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Button } from 'reactstrap'
 
-import "../assets/css/Login.css"
+import "../assets/css/login.css"
 import BG from "../assets/images/loginBg.jpeg"
 
-export const Login = () => {
+function Login(){
   const [loader, setLoader ] = useState(false);
 
+  const handleLogin = () => {
+    console.log('nyaa');
+  }
   const renderButton = () => {    
-      if (loader) {
+      if (!loader) {
         return( 
-          <Button type="button" color='login' style={{ width: '100%' }} onClick={this.handleLogin}>Sign In</Button>
+          <Button type="button" color='login' style={{ width: '100%' }} onClick={handleLogin}>Sign In</Button>
         )
       } else {
           return(
@@ -28,14 +31,12 @@ export const Login = () => {
   return(
       <div style={{ height: '100vh' }}>
       <Row style={{  height: '100%' }}>
-        <Col md={6} className="left-column" style={{
-          background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${BG})`, backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center', backgroundSize: 'cover'
-        }}>
+        <Col md={6} className="left-column text-center" style={{alignItems:'center', justifyContent:'center'}} >
+          <img src={BG} style={{width:'80%', margin:'auto', padding:'auto', marginTop:'16em'}} />
         </Col>
 
         <Col md={6} className="right-column">
-          <h1 style={{}}>Hi there!</h1>
+          <h1 style={{color:'#fff'}}>Hi there!</h1>
          
           <br /><br />
           <div className="login-form">
@@ -51,8 +52,7 @@ export const Login = () => {
       </Row>
       {/* <ErrorAlert text={this.state.text} toggle={this.state.toggle} parentToggle={this.childToggle} success={this.state.success} /> */}
     </div>
-
-
-
   )
 }
+
+export default Login

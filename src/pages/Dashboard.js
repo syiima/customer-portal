@@ -68,13 +68,12 @@ function Dashboard(){
             
         })
         .catch(error => {
-            console.log('Error:', error);
+            // console.log('Error:', error);
         });
 
     }
 
     const content = () => {
-        console.log('ello', data);
         if (data.length === 0) {
             return <div>Loading...</div>;
         } else {

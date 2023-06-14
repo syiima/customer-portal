@@ -1,6 +1,6 @@
 .right-column{
 	padding:15px;
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #2B72C2;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #47789F;
 	display: flex;
 	/* align-items: center; */
 	justify-content: center;
@@ -33,11 +33,11 @@
 }
 
 .btn-login{
-	background-color: #2B72C2;
+	background-color: #47789F;
 	border-radius: 25px !important;
 }
 .btn-login:hover{
-	background-color: #2B72C2;
+	background-color: #47789F;
 	border-radius: 25px !important;
 }
 .login-form{
